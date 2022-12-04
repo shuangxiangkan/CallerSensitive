@@ -2,6 +2,11 @@
 
 ```
 sudo apt-get install zlib1g-dev unzip cmake gcc g++ libtinfo5 nodejs 
+npm i --silent svf-lib --prefix ${HOME}
+git clone https://github.com/shuangxiangkan/CallerSensitive.git
+source ./env.sh
+cmake . && make
+
 ```
 
 ## 1. Install SVF and its dependence (LLVM pre-built binary) via npm

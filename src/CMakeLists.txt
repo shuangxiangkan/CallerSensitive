@@ -1,10 +1,12 @@
-llvm_map_components_to_libnames(llvm_libs bitwriter core ipo irreader instcombine instrumentation target linker analysis scalaropts support )
-file (GLOB SOURCES
-   *.cpp
-)
-add_executable(svf-ex ${SOURCES})
 
-target_link_libraries(svf-ex ${SVF_LIB} ${llvm_libs})
-target_link_libraries(svf-ex ${Z3_LIBRARIES})
-set_target_properties( svf-ex PROPERTIES
+if(DEFINED IN_SOURCE_BUILD)
+set(LLVM_LINK_COMPONENTS BitWriter Core IPO IrReader InstCombine Instrumentation Target Linker Analysis ScalarOpts Support Svf)
+add_llvm_tool( summary summary.cpp )
+else()
+add_executable( summary summary.cpp CallerSensitve.cpp CallerLLVMIRBuilder.cpp )
+
+target_link_libraries( summary Svf ${llvm_libs} )
+
+set_target_properties( summary PROPERTIES
                        RUNTIME_OUTPUT_DIRECTORY ${CMAKE_BINARY_DIR}/bin )
+endif()
