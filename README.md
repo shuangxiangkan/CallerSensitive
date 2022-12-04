@@ -1,4 +1,4 @@
-## 0. Install npm, zlib, unzip, cmake, gcc, nodejs (skip this step if you machine has these libs)
+## 1. Install npm, zlib, unzip, cmake, gcc, nodejs (skip this step if you machine has these libs)
 
 ```
 sudo apt-get install zlib1g-dev unzip cmake gcc g++ libtinfo5 nodejs 
@@ -6,29 +6,9 @@ npm i --silent svf-lib --prefix ${HOME}
 git clone https://github.com/shuangxiangkan/CallerSensitive.git
 source ./env.sh
 cmake . && make
-
 ```
 
-## 1. Install SVF and its dependence (LLVM pre-built binary) via npm
+## 1. 输入以下命令，后两个参数第一个为根据java生成的caller的json文件，第二个为调用的cpp文件编译后的.ll文件，将会生成一个cppSummary.json的文件
 ```
-npm i --silent svf-lib --prefix ${HOME}
-```
-
-## 2. Clone repository
-```
-git clone https://github.com/SVF-tools/SVF-example.git
-```
-
-## 3. Setup SVF environment and build your project 
-```
-source ./env.sh
-```
-cmake the project (`cmake -DCMAKE_BUILD_TYPE=Debug .` for debug build)
-```
-cmake . && make
-```
-## 4. Analyze a bc file using svf-ex executable
-```
-clang -S -c -g -fno-discard-value-names -emit-llvm example.c -o example.ll
-./bin/svf-ex example.ll
+./bin/summary -ander caller.json  callee.ll
 ```

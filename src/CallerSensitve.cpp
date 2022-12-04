@@ -320,7 +320,7 @@ void CallerSensitive::getCallees(std::string jsonPath)
                             std::vector<int> args;
                             while(arg)
                             {
-                                std::cout << arg->valueint << std::endl;
+                                // std::cout << arg->valueint << std::endl;
                                 args.push_back(arg->valueint);
                                 arg = arg->next;
                             }
@@ -374,7 +374,7 @@ void CallerSensitive::aliasedCallerArgsAndRet(const SVFFunction& fun, AndersenBa
             ConstraintNode *srcNode = (*eit)->getSrcNode();
             for (auto it = srcNode->getAddrInEdges().begin(); it != srcNode->getAddrInEdges().end(); it++)
             {
-                std::cout << (*it)->getSrcID() << std::endl;
+                // std::cout << (*it)->getSrcID() << std::endl;
                 if (pts.test((*it)->getSrcID()))
                 {
                     cm->isRetTained = true;
@@ -420,7 +420,7 @@ void CallerSensitive::aliasedCallerAndCalleeArgs(const SVFFunction &fun, CallSit
                 ConstraintNode *srcNode = (*eit)->getSrcNode();
                 for (auto it = srcNode->getAddrInEdges().begin(); it != srcNode->getAddrInEdges().end(); it++)
                 {
-                    std::cout << (*it)->getSrcID() << std::endl;
+                    // std::cout << (*it)->getSrcID() << std::endl;
                     if (pts.test((*it)->getSrcID()))
                     {
                         cArgs.push_back(std::to_string(j - 2));
@@ -662,7 +662,7 @@ void CallerSensitive::CreateSpecification()
     }
 
     FILE *file = NULL;
-    file = fopen("java.json", "w");
+    file = fopen("cppSummary.json", "w");
     if (file == NULL)
     {
         std::cout << "Open file fail!" << std::endl;

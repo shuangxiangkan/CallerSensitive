@@ -1,0 +1,9 @@
+{
+	"Java_me_hexzone_externalnativecalltester_CallerController_simpleSumTest":	{
+		"isRetTained":	false
+	},
+	"Java_me_hexzone_externalnativecalltester_CallerController_nativeNativeSumTest":	{
+		"isRetTained":	true,
+		"Ret":	"arg1"
+	}
+}

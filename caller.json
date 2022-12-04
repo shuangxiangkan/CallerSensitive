@@ -1,0 +1,28 @@
+{
+    "callerNative": {
+      "returnType": "java.lang.String",
+      "paramTypes": [],
+      "callee": {
+        "javaName": "simpleSumTest",
+        "nativeName": "Java_me_hexzone_externalnativecalltester_CallerController_simpleSumTest",
+        "returnType": "int",
+        "paramTypes": [
+          "int",
+          "int"
+        ]
+      }
+    },
+    "callerNativeNative": {
+      "returnType": "java.lang.String",
+      "paramTypes": [],
+      "callee": {
+        "javaName": "nativeNativeSumTest",
+        "nativeName": "Java_me_hexzone_externalnativecalltester_CallerController_nativeNativeSumTest",
+        "returnType": "int",
+        "paramTypes": [
+          "int",
+          "int"
+        ]
+      }
+    }
+  }
