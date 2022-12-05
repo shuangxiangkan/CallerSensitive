@@ -1,0 +1,44 @@
+target/
+!.mvn/wrapper/maven-wrapper.jar
+!**/src/main/**/target/
+!**/src/test/**/target/
+
+### Project ###
+CallerSensitiveAnalyzer/lib/
+
+### Soot ###
+CallerSensitiveAnalyzer/sootOutput/
+
+### IntelliJ IDEA ###
+CallerSensitiveAnalyzer/.idea/modules.xml
+CallerSensitiveAnalyzer/.idea/jarRepositories.xml
+CallerSensitiveAnalyzer/.idea/compiler.xml
+CallerSensitiveAnalyzer/.idea/libraries/
+*.iws
+*.iml
+*.ipr
+
+### Eclipse ###
+CallerSensitiveAnalyzer/.apt_generated
+CallerSensitiveAnalyzer/.classpath
+CallerSensitiveAnalyzer/.factorypath
+CallerSensitiveAnalyzer/.project
+CallerSensitiveAnalyzer/.settings
+CallerSensitiveAnalyzer/.springBeans
+CallerSensitiveAnalyzer/.sts4-cache
+
+### NetBeans ###
+CallerSensitiveAnalyzer//nbproject/private/
+CallerSensitiveAnalyzer//nbbuild/
+CallerSensitiveAnalyzer//dist/
+CallerSensitiveAnalyzer//nbdist/
+CallerSensitiveAnalyzer//.nb-gradle/
+CallerSensitiveAnalyzer/build/
+!**/src/main/**/build/
+!**/src/test/**/build/
+
+### VS Code ###
+CallerSensitiveAnalyzer/.vscode/
+
+### Mac OS ###
+.DS_Store
