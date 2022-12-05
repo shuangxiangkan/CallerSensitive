@@ -1,4 +1,4 @@
-## 1. Install npm, zlib, unzip, cmake, gcc, nodejs (skip this step if you machine has these libs)
+## 1. 安装步骤
 
 ```
 sudo apt-get install zlib1g-dev unzip cmake gcc g++ libtinfo5 nodejs 
