@@ -1,4 +1,4 @@
-## 1. 安装步骤
+## 1. cppSummaryGenerator安装步骤
 
 ```
 sudo apt-get install zlib1g-dev unzip cmake gcc g++ libtinfo5 nodejs 
